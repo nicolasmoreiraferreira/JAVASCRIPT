@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX SOLO</title>
+  </head>
+  <body>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    País <input type="text" name="pais" id="pais" />
+    <input type="button" value="Verificar" onclick="text()" />
+    <div id="res"></div>
+    <script>
+      function text() {
+        var pais = window.document.querySelector("input#pais");
+        var res = window.document.querySelector("div#res");
+        var local = String(pais.value);
+
+        res.innerHTML = `<p>Vivendo em <strong>${local}</strong></p>`;
+        if (local == "Brasil") {
+          res.innerHTML += `<p>Voce é <strong>Brasileiro</strong></p>`;
+        } else {
+          res.innerHTML += `<p>Voce é <strong>Estrangeiro</strong></p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
