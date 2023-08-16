@@ -1,14 +1,26 @@
 function tabuada() {
-let numero = Number(document.getElementById('inum').value)
-let res = Number(document.getElementById('res').value)
-let ress = Number(document.getElementById('ires').value)
-console.log('numero', numero)
-console.group('ress', ress)
-switch (numero) {
-case 0:
-  res.innerHTML = numero * ress
-  break
-}
+
+let num = document.getElementById('txtn')
+let tab = document.getElementById('seltab')
+if (num.value.length == 0) {
+    window.alert('Por favor, digite um número!')
+} else {
+  let n = Number(num.value)
+  let c = 1
+  tab.innerHTML = ''
+  while (c <= 10) {
+    let item = document.createElement('option')
+    item.text = `${n} x ${c} = ${n*c}`
+    item.value = `tab${c}`
+    tab.appendChild(item)
+    c++
+    }
+  }
+
+
+
+
+
 
 
 }
